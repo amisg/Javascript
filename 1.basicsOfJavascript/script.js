@@ -1,381 +1,467 @@
-// let name = "Amith";
-// console.log(name);
+// ---- ----------- Variable Naming -------------------
 
-// ----------- Variable ----------- //
-// var
-// let
-// const
+// Variable Name  CAN NEVER START WITH A NUMBER.
+// Variable Name can HAVE number in Between Or In the END
 
-//----------- string literal ------------//
+// const 1num -> this is illegal
+// const 10 = "asasd" -> this is also illegal
 
-// let score = 200;
-// score = 202;
+// const num1 -> this is good
+// const nu1mmmm -> this is also Good.
 
-// const scoreBoard = `hey folks score is ${score}`;
+// ------ ---------------------- VARIABLE -------------------------
 
+// Let Const Var
+
+// let num = 12;
+// num = 10000000; // this is allowed
+// console.log(num);
+// let names = "utkarsh";
+
+// let char = "c";
+// let decision = true;
+
+// console.log(num, names, char, decision);
+
+// Old Js -> before Es-6 Ecma Script Before 2015
+
+// var name = "akash";
+// var id = 1;
+// var decision = true;
+// var ch = "c";
+
+// console.log(name, id);
+
+// new Js After ES6 After 2015
+
+// const name = "utkrsh";
+// name = "asdasdas"; // this is illegal. You cannot re assign const..
+// const name; // this is also illegal
+
+// console.log(name, "names debug");
+
+// NOTE: It means JS is not a strictly Typed Language like JAVA.
+
+//  ----- Destructuring variable declaration and assignement.
+
+// let a = 12;
+
+// this line can be converted to 2 steps.
+// let a; // varaible declaration.
+// a = 120000; // variable assignment;
+
+// console.log(a, "a debug");
+
+//  ------------------------------- String Literal --------------------
+
+// var score = 115;
+
+// // magic
+
+// const commentary = ` Hey India's score is ${score} Enjoy!!!`;
+// const scoreBoard = `  ${score} Enjoy!!!`;
+// const popupButton = ` Score is  ${score} Enjoy!!!`;
+
+// console.log(commentary);
 // console.log(scoreBoard);
+// console.log(popupButton);
 
-// -------------- dataTypes ----------//
+//  ----- --------- Data Types -----------------
 
-// https://github.com/thakurutkarsh22/Newton-Javascript-FSD-July-2023
-// function mult(a, b) {
-// 	const ans = a * b;
-// 	return ans;
-// }
+// 1 - Number;
 
-// console.log(a);
-// var a = 2;
-// console.log(a);
+// let num = 1;
+// let marks = 12.5;
 
-// let tenSquared = function (x) {
-// 	return x * x;
-// };
-// console.log(tenSquared(2));
+// console.log(marks);
 
-// let arr = [1, 2, 3];
+// console.log(1 / 0); // Infinity
 
-// let obj = {
-// 	name: "ami",
-// 	age: 24,
-// 	canDrive: true,
-// };
+// // 2 - BigInt
 
-// for (let index = 0; index < arr.length; index++) {
-// 	// const element = array[index];
-// 	console.log(arr[index]);
-// }
+// var bigInt = 12312312312312312312312312312;
 
-// let j = 0;
-// while (j < arr.length) {
-// 	console.log(arr[j]);
-// 	j++;
-// }
+// // 3 - String
 
-// for (const item of arr) {
-// 	const element = item;
-// 	console.log(element);
-// }
+// var name = "utkrsh";
+// ("");
+// let school = "Kiit world school ${bigInt}";
+// let cha = "c"; //. this is a string unlike JAVA
 
-// for (const key in obj) {
-// 	const element = obj[key];
-// 	console.log(key);
-// 	console.log(element);
-// }
+// let score = `Yes !! to variable things ${bigInt}`;
 
-// const obj = {
-// 	name: "John",
-// 	age: 25,
-// 	city: "New York",
-// };
+// console.log(name, school, cha, score);
 
-// let result = "";
+// // NOTE - Character is in Java but not in Javascript.
 
-// for (let key in obj) {
-// 	if (key === "age") {
-// 		continue;
-// 	}
-// 	result += `${key}: ${obj[key]}, `;
-// }
+// // 4 - Boolean
 
-// console.log(result);
+// let isNameChecked = false;
+// let isSunHot = true;
 
-// var a = 1;
-// var b = true;
-// var c = "abcd";
+// // 5 - null
 
-// var obj = {
-// 	name: "ami",
-// };
+// let age = null;
+// console.log(age, "age devug");
 
-// console.log(a, b, c);
-// console.log(obj);
+// // 6 - undefined (JS gives a default Value to the variables)
 
-// alert("how r u");
+// let person;
+
+// console.log(person, "person debug");
+
+//  ----------------- Interaction ----------------------
+// 1. Console.log
+// console.log("hello console");
+
+// // 2. alerts
+// alert("helloa how are y");
+
+// -----------------------------  typeOf Keyword ----------------------
+
+// const marks = 12;
+// console.log(typeof marks); // number
+
+// const place = "delhi";
+// console.log(typeof place); // string
+
+// const bigNumber = 12312312312312312312312312312312;
+// console.log(typeof bigNumber); // number
+
+// const bool = true;
+// console.log(typeof bool); //boolean
+
+// let weather;
+// console.log(typeof weather); // undefined
+
+// let school = null;
+// console.log(typeof school); // it should have been null BUT THERE IS A BUG IN JS so its answer is "Object"
+
+// --------------------------- Type Conversion (Coersion) -------------------
+
+// ---------- String Conversion
+
+// Rule 1 -> String + Number(int) = String;
+// String + boolean = String;
+// String + String = String;
+// String + bigInt = String;
+// String + null = String;
+
+// String + ANything = String;
+
+// var numberPlusString = 1 + "hello";
+// const booleanPlusString = true + "hello";
+// let nullPlusString = null + "hello";
+// console.log(numberPlusString);
+// console.log(booleanPlusString);
+// console.log(nullPlusString);
+
+// Rule 2 - String(anything) = string
+// const numString = String(1);
+
+//  ----------- Number Conversion
+
+// 1. String-Number to a Number ;
+
+// const marks = "12";
+// console.log(+marks); // 12 // DO not use this +, it works but it is bad for Code readibility.
+// console.log(Number(marks)); // 12
+
+// const anyRandomString = "12abcd";
+// console.log(Number(anyRandomString)); // Nan // You cannot convert every STRING to a number (that dosent makes sense).
+
+// const mult = "3" * "3"; // 9
+// const minus = "3" - "3"; // 0
+// const division = "3" / "3"; // 1
+// const modulus = "3" % "3"; // 0
+
+// // NOTE -> Example of String + string = string
+// const addition = "3" + "3"; // "33"
+
+// // + -> Concatination, Addition
+// + -> when there is a string + means Concatination and NOT Mathematical Addition (By default).
+
+// console.log(mult, minus, division, addition, modulus); // 9 0 1 '33' 0
+
+//  ------------- Boolean Conversion
+
+// Number -> Boolean
+// Boolean(0); // false
+// Boolean(1); // true
+// Boolean(100); // true
+
+// // Boolean(anyNumber Except 0) // Give True
+
+// // String -> Boolean
+
+// Boolean(""); // false
+// Boolean("1"); // true
+
+// Boolean(any length of string except 0) // Give True./
+
+//  ------------ - - - - - - -------- Objects ------------------
+// Object is a collection of Key value Pair seperated by :
 
 // let person = {
-// 	name: "ami",
-// 	std: 12,
-// 	"hello world": "hey's",
+//   name: "utkarsh",
+//   class: 122,
+//   "hello world": "hey's",
+//   version: 8,
 // };
 
-// // console.log(person);
+// person = null;
+
+// console.log(person);
 
 // const person2 = person;
 
-// // person = null;
+// person = null;
 
-// console.log(person2, "person2 debug");
+// console.log(person, "person"); // null
+// console.log(person2, "person2"); // object
+
+// ------ Get
+
+// console.log(person.name, "person name debug"); // utkarsh
+// console.log(person.class, "person class debug"); // 122
+// console.log(person.hello world, "person class debug"); // undefined
+
+// console.log(person["name"], "person name debug"); // utkarsh
+// console.log(person["class"], "person classss debug"); // 122
+// console.log(person["hello world"], "person hello world debug"); // hey's
+
+// ------ Edit
+
+// person.name = "akash";
+// person["hello world"] = "Welcome to my BARN!!!";
+
+// console.log(person.name, "changed name");
+// console.log(person["hello world"], "changed HELLO NAME");
+
+//  -------- delete
+
+// console.log("version before delete", person.version); // 8
+
+// delete person.version;
+// delete person["hello world"];
+
+// console.log("version after delete", person.version); // undefined
 
 // console.log(person);
 
-// person["hello world"] = "hii";
+// ------------------   ARRAys --------------------
+// [1,2,3,4,5,6,]
+// java: int[] arr = {1,2,3,4}
 
-// console.log(person);
+// let arr = [1, 2, 3, 4, 5, "hey there", true];
 
-// let arr = [1, 2, 3, 4];
+// arr = null;
 
-// console.log(arr[arr.length - 1]);
+// console.log(arr);
+// console.log(arr.length, "length of array"); // 7
 
-// let c = 13;
+//  ------ get
 
-// function sum(a, b) {
-// 	return a + b + c;
-// }
+// console.log(arr[0]); // 1
+// console.log(arr[1]); // 2
+// console.log(arr[arr.length - 1]); // true
 
-// console.log(sum(1, 2));
+// NOTE: WEIRD PART - If you arr.length = 0; the array would become BLANK.
+// arr.length = 0; // do not do this everrrrr..
 
-// function child(name, standard, rollnumber, ...otherTHings) {
-// 	console.log(name, standard, rollnumber, "importnant information"); // store in good place
+// ------ edit
 
-// 	console.log(otherTHings);
-// }
-
-// // animesh child
-// child(
-// 	"animesh",
-// 	"12",
-// 	1,
-// 	"utkarsh",
-// 	"anamika",
-// 	"3233 delhi",
-// 	"gun",
-// 	"asdas",
-// 	"asdasd",
-// 	"asdasd"
-// );
-
-// child("animesh", "12", 1);
-
-// function add(x, y) {
-// 	return x + y;
-// }
-
-// function sub(x, y) {
-// 	return x - y;
-// }
-
-// function mul(x, y) {
-// 	return x * y;
-// }
-
-// function loggingFunction(fn, x, y) {
-// 	console.log(`%c ${x}, ${y} debug`, " color : red");
-// 	return fn(x, y);
-// }
-
-// let ans = loggingFunction(add, 3, 4);
-
-// let ans1 = loggingFunction(sub, 3, 4);
-
-// let ans2 = loggingFunction(mul, 3, 4);
-
-// console.log(ans, ans1, ans2);
-
-// const cb = greeting(()=>{
-// 	console.log("hello");
-// })
-
-// function square(x) {
-// 	return x * x;
-// }
-
-// function higherOrderFunction(num, callback) {
-// 	return callback(num);
-// }
-
-// console.log(higherOrderFunction(5, square));
-
-// function greeting(name) {
-// 	return function () {
-// 		console.log("Hello, " + name + "!");
-// 	};
-// }
-
-// const greetJane = greeting("Jane");
-
-// greetJane();
-
-// function myFunction(num1, num2, callback) {
-// 	let sum = num1 + num2;
-// 	callback(sum);
-// }
-
-// myFunction(2, 3, function (result) {
-// 	console.log(result);
-// });
-
-// function greeting(name) {
-// 	alert("Hello " + name);
-// }
-// function processUserInput(callback) {
-// 	var name = prompt("Please enter your name.");
-// 	callback(name);
-// }
-// processUserInput(greeting);
-
-// const param1 = function () {
-// 	console.log("param1");
-// };
-
-// const param2 = function () {
-// 	console.log("param2");
-// };
-
-// function sum(obj1, obj2) {
-// 	// obj1 and obj2 are functions and these are knows as par
-// 	console.log("hey there i am functon sum");
-// 	console.log(obj1);
-// 	console.log(obj2);
-// }
-
-// sum(param1, param2);
-
-// function person() {
-// 	let inner = {
-// 		name: "uttkarsh",
-// 		class: 12,
-// 	};
-
-// 	return inner;
-// }
-
-// console.log(person());
-
-// var x;
-
-// function func() {
-// 	var x = (y = 1);
-// }
-
-// func();
-
-// console.log(x, y);
-
-// var a = 9;
-
-// function abc() {
-// 	var a;
-// 	console.log(a);
-// }
-
-// abc();
-
-// let arr = [1, 2, 3, 4, 5, 5];
-
-// console.log(arr.push(100)); //gives the length of the arr
+// arr[0] = 10000000;
 
 // console.log(arr);
 
-// console.log(arr.pop()); // it will give the last element
+// ------- arrays Property
 
+// 1.  Push..
+
+// const newLength = arr.push("hello");
+
+// console.log(newLength);
 // console.log(arr);
 
-// let slicedArr = arr.slice(1);
+// 2. Pop ...
 
-// console.log(slicedArr, "debug slice");
+// const LastElement = arr.pop();
+// console.log(LastElement); // true
+// console.log(arr);
 
-// let spliceArr = arr.splice(1, 2);
+//  --------------------- FUNCTIONS ---------------------
+// Look at function folder....
 
-// console.log(spliceArr, "debug splice");
+// -------------------- Facts about JS Parsing ------------
 
-// console.log(arr, "original array");
+// When JS File is Parsed(travelled) It is parsed from TOP to Bottom.
+// Travelling has 2 Phases
+// 1. Parsing phase - Only  Function DECLARATION and Variable DECLARATION.
+// 2. Execution phase - Everything except in Parsing phase.
+// 3. By default COde is being Parsed in GLOBAL EXECUTION CONTEXT (GEC)
 
-// let arr = ["hi", "ami", "gm"];
+// --------------------- Hoisting -----------------
 
-// let eachFun = (item, h, a) => console.log(item, h, a, "amiWants");
+/*
+    Variable DECLARATION and Function DECLARATION are Hoisted.
 
-// arr.forEach(eachFun);
+    Hoisted means to bring these 2 things on top of the file.
+*/
 
-// let arr = [1, 2, 3, 4];
+// console.log(namePrint("utkrsh"));
+// console.log(namePrint("akash"));
 
-// const mappedArray = arr.map((item) => {
-// 	console.log(item * 3);
-// 	return item * 3;
-// });
-
-// console.log(mappedArray);
-
-// function find(fn){
-
-// 		const element = array[i];
-// 		const searchedElemnt = fn(item,index,arr);
-// 		if(searchedElemnt==element){
-// 			return true;
-// 		}else{
-// 			return false;
-// 		}
-
+// function namePrint(name) {
+//   return `hey !!! ${name}`;
 // }
 
-// function fn(item){
-// 	for (let index = 0; index < array.length; index++) {
-// 		const x = array[index];
-// 		return x;
-// 	}
+//  ------ Fact ---
+// var a = 12; // this line as 2 parts
+
+// the above line can be de-constructed into 2 steps.
+
+// var a; // 1. Variable Declaration
+// a = 12; // 2. Variable Assignment
+
+// Exmple 1
+
+// console.log(a, "debug");
+// var a = 12;
+
+// console.log(a);
+
+// Example 2:
+
+// var a;
+// a = 9;
+// console.log(a);
+
+// Example 3:
+
+// sum();
+// function sum() {
+//   console.log(10);
+//   return 10;
 // }
 
-// function foo() {
+// Note: LET and COnst are also Hoisted but in a special known as Temporal_deadzone.
+// Temporal_deadzone dont allow to read variables By "EYE" if the property is Undefined.
 
-// 	return "I'm the outer function";
+// console.log(a);
+// let a = 12;
 
+//  -------------------- Basic Maths (assignment, operator) ----------
+
+// console.log(1 + 2); // 3
+// console.log(10 % 2); // 0
+
+// console.log(Math.pow(2, 3)); // 8
+
+// --------------- Comparisons ------------------------
+// >, <, <=, >=, ==, !=, ===, !==,
+
+// console.log(10 > 2); // true
+// console.log(10 < 2); // false
+
+// console.log(10 == 2); // false
+// console.log(10 == 10); // true
+
+// console.log("10" == 10); // true, why is this weird ????
+// console.log("10" === 10); // false
+
+// === is doing 2 things
+// 1. checking the value //yes
+// 2. checking the type // no
+
+/*
+
+    Basic Programming
+
+*/
+
+if (true) {
+	// do soemthing
+} else {
+	// do something
+}
+
+//  --- Loops ->
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < arr.length; i++) {
+//   const element = arr[i];
+//   console.log(element);
+// }
+
+// let j = 0;
+
+// while (j < arr.length) {
+//   console.log(arr[j]);
+//   j++;
+// }
+
+// for in -> loops over object and its properties. (Object keys ) -> will work with both Arrays and Obj
+// for of -> arrays and (Iterable Objects ONLY) -> array is a default iterable . (values)
+
+// questioin:  How to find iterable Objects
+// answer: go to prototype of that perticular object and find Symbol.iterator. if found it is an interable Object.
+
+// for (const item of arr) {
+//   console.log(item, "for of");
+// }
+
+// let obj = {
+//   name: "ut",
+//   age: 50,
+//   canDrive: false,
 // };
 
-// function test() {
-
-// 	console.log(bar);
-
-// 	return foo();
-
-// 	var bar = "I'm a variable";
-
-// 	function foo() {
-
-// 	return "I'm the inner function";
-
-// 	}
-
+// for (const key in obj) {
+//   const value = obj[key];
+//   console.log(key);
+//   console.log(value);
 // }
 
-// 	console.log(test());
+// What if ? I use For in for arrays.
 
-// 	const nums = [1,2,3,4,5,6,7];
+// const arr = [99, 86, 45, 90, 100];
+// // values
 
-// 	nums.forEach((n) => {
+// for (let item of arr) {
+//   console.log(item);
+// } // 99, 86,45, 90,100
 
-// 	if(n%2 === 0)
+// for (let item in arr) {
+//   console.log(item);
+// } // 0,1,2,3,4
 
-// 	break;
+// what if ? I use For Of for arrays....
 
-// 	console.log(n);
+// ------ Switch
 
-// 	});
-
-// let num = [1, 2, 3, 4];
-
-// let numArr = [];
-
-// for (let index = 0; index < num.length; index++) {
-// 	const element = num[index];
-// 	numArr.push(element * 2);
+// switch(condition) {
+//     case 10:
+//     case 1:
+//         console.log("1");
+//         break;
+//     case 2:
+//         console.log("2");
+//         break;
+//     default:
+//         console.log("default value -1");
 // }
-// console.log(numArr);
 
-// let newArray = num.map((item) => {
-// 	return item * 2;
-// });
+// ------------------- Advance things of variable ---------
 
-// console.log(newArray);
+// 1. you can define Variable as 3 ways
+// let const and var
 
-// let country = "india";
+// let b = 9;
+// const d = 12
+// var x = 12;
 
-// let answer = country.substring(0, 1).toUpperCase() + country.substring(1);
+// a = 12; // -> will ALways be declaared in GEC (dosent matter where this a is defined)
 
-// console.log(answer);
-
-// console.log("a" > "Z");
-
-// console.log("zebra".localeCompare("abcde"));
-const fruits = ["apple", "banana", "mango"];
-console.log(fruits[1]); // banana
-console.log(fruits.pop()); // mango
-console.log(fruits.push("orange")); // 3
+// console.log(a, x); // undefined, 1
