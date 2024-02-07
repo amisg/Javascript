@@ -311,3 +311,18 @@ const utkarsh = greeting(() => {
 });
 
 // the inside function or utkrshHelloFuncton is known as CALLBACK FUNCTIONS
+
+//  ------------------- DEFAULT PARMATERS IN JAVASCRIPT FUNCTION ---------------
+
+// if in ARGUMENTS we do dot provide the value of PARAMETER then a PARAMETER can TAKE DEFAULT_VALUE....
+
+// default value of a = 9 and for b = 100
+
+// function sum(a = 9, b = 100) {
+//   return a + b;
+// }
+
+// const result = sum(10); // 110
+// const result2 = sum(undefined, 10); // 19
+// const result3 = sum(); // 109
+// console.log(result3);
