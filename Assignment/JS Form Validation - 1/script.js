@@ -30,7 +30,7 @@ function handleSubmit(e) {
 			resultHolderElement.textContent = "Use your phone in moderation";
 		}
 	} else {
-		if (age > 13) {
+		if (age < 13) {
 			resultHolderElement.textContent = "You will get a phone soon";
 		} else {
 			resultHolderElement.textContent = "You should get a phone";
