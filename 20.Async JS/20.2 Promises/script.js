@@ -299,3 +299,8 @@ window.addEventListener("unhandledrejection", () => {
 
 	// show betiful scrren here
 });
+
+const student = [
+	{ name: "amith", marks: 200 },
+	{ name: "varun", marks: 230 },
+];
