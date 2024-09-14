@@ -51,18 +51,18 @@ const childElement = document.getElementById("child");
 
 // // If I click on child Element
 
-// childElement.addEventListener("click", (eventObj) => {
-//   console.log("child CLicked");
-// });
+childElement.addEventListener("click", (eventObj) => {
+	console.log("child CLicked");
+});
 
-// grandParentElement.addEventListener("click", () => {
-//   console.log("grandparent hello");
-// });
+grandParentElement.addEventListener("click", () => {
+	console.log("grandparent hello");
+});
 
-// parentElement.addEventListener("click", (eventObj) => {
-//   // console.log(eventObj); // target => SomeElement
-//   console.log("parent clicked !!!");
-// });
+parentElement.addEventListener("click", (eventObj) => {
+	// console.log(eventObj); // target => SomeElement
+	console.log("parent clicked !!!");
+});
 
 //  ---------------------- CAPTURING PHASE -----------------------
 
@@ -187,17 +187,17 @@ const childElement = document.getElementById("child");
 
 //  EVENT DELEGATION ...
 
-const buttonElement = document.getElementById("button");
+// const buttonElement = document.getElementById("button");
 
-const callBack = () => {
-	console.log("click me");
-};
-buttonElement.addEventListener("click", callBack);
+// const callBack = () => {
+// 	console.log("click me");
+// };
+// buttonElement.addEventListener("click", callBack);
 
-// Faking things
-// after 5 seconds remove this Event listner from buttonElement
-// 5000 - milliseconds -> 5sec
+// // Faking things
+// // after 5 seconds remove this Event listner from buttonElement
+// // 5000 - milliseconds -> 5sec
 
-setTimeout(() => {
-	buttonElement.removeEventListener("click", callBack);
-}, 5000);
+// setTimeout(() => {
+// 	buttonElement.removeEventListener("click", callBack);
+// }, 5000);
