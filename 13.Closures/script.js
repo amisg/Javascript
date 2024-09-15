@@ -24,19 +24,21 @@
 // let a = 10;
 
 // function foo() {
-//   let b = 100;
+// 	let b = 100;
 
-//   function bar() {
-//     let c = 12;
-//     return a + b + c + d;
-//   }
+// 	function bar() {
+// 		let c = 12;
+// 		return a + b + c + d;
+// 	}
 
-//   let d = 90000;
+// 	let d = 90000;
 
-//   return bar;
+// 	return bar;
 // }
 
 // const result = foo();
+
+// console.log(result);
 
 // result(); //
 
@@ -46,17 +48,17 @@
 
 // Answer 1 :
 
-let count = 0;
+// let count = 0;
 
-function counter() {
-	// counter + env { count = 0 }
-	count++;
-	return count;
-}
+// function counter() {
+// 	// counter + env { count = 0 }
+// 	count++;
+// 	return count;
+// }
 
-console.log(counter()); // 1
-console.log(counter()); // 2
-console.log(counter()); // 3
+// console.log(counter()); // 1
+// console.log(counter()); // 2
+// console.log(counter()); // 3
 
 /* now you want to achieve this 
 
@@ -72,22 +74,22 @@ console.log(counter()); // 3
 
 */
 
-function someFun() {
-	let count = 0;
+// function someFun() {
+// 	let count = 0;
 
-	function counter() {
-		count++;
-		return count;
-	}
+// 	function counter() {
+// 		count++;
+// 		return count;
+// 	}
 
-	return counter;
-}
+// 	return counter;
+// }
 
-let counterInital = someFun(); /// counter + LexicalEnv { count = 0}
-let counter2 = someFun(); // counter + LxicalEnv { count = 0}
+// let counterInital = someFun(); /// counter + LexicalEnv { count = 0}
+// let counter2 = someFun(); // counter + LxicalEnv { count = 0}
 
-console.log(counterInital()); // 1
-console.log(counterInital()); // 2
+// console.log(counterInital()); // 1
+// console.log(counterInital()); // 2
 
-console.log(counter2()); // 1
-console.log(counter2()); // 2
+// console.log(counter2()); // 1
+// console.log(counter2()); // 2
