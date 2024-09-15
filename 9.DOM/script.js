@@ -217,3 +217,50 @@
 //   fakeNodeOfNamesListElement.append(listItemElement);
 // }
 // namesListElement.append(fakeNodeOfNamesListElement);
+
+//----------------------------- Advance edit elements (innerText,innerHtml)
+
+// const containerElement = document.getElementById("container");
+// console.dir(containerElement);
+
+//----------textContent(only text witout formatting)-------
+
+// containerElement.textContent = `haijija
+// jahijadoskdf    sdvsfdv
+// ahfisjiafj`;
+
+//---------innerHtml(use of html tags )------------
+
+// containerElement.innerHTML = `haijija
+// <strong>jahijadosk</strong>  safas
+// ahfisjiafj`;
+
+//----------innerText(formatting)------------
+
+// containerElement.innerText = `haijija
+// <strong>jahijadosk</strong>     sfgdg
+// ahfisjiafj`;
+
+// !!innerHTml is dangerous ---
+
+// containerElement.innerHTML = `<script>//hacker script</script`;
+// console.log(containerElement);
+
+// question : adding list item using innerHtml
+
+/*
+
+<ul id="names" class="">
+        <li>Mayank</li>
+        <li>yash</li>
+        <li>priyanka</li>
+        <li>Vikash</li>
+    </ul>
+
+
+*/
+
+const namesListElement = document.getElementById("names");
+console.dir(namesListElement);
+
+namesListElement.innerHTML += `<li>sri</li>\n`;
