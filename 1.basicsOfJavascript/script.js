@@ -465,3 +465,25 @@ if (true) {
 // a = 12; // -> will ALways be declaared in GEC (dosent matter where this a is defined)
 
 // console.log(a, x); // undefined, 1
+
+// let math = {
+// 	marks: 100,
+// 	grade: "A+",
+// };
+
+// let science = {
+// 	marks: 90,
+// 	grade: "A",
+// };
+
+// function sum(subParam1, subParam2) {
+// 	subParam1.marks = 60;
+// 	subParam2.marks = 70;
+// 	let marks1 = subParam1.marks;
+// 	let marks2 = subParam2.marks;
+// 	return marks1 + marks2;
+// }
+
+// console.log(sum(math, science));
+
+// console.log(math.marks, science.marks);
