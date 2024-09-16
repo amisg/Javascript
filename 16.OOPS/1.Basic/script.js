@@ -82,47 +82,47 @@
 // ANy PROPERTIES of child CAN NEVER BE part of Parent Object.
 
 // parent class
-class Student {
-	name;
-	standard;
+// class Student {
+// 	name;
+// 	standard;
 
-	constructor(name, standard) {
-		this.name = name;
-		this.standard = standard;
-	}
+// 	constructor(name, standard) {
+// 		this.name = name;
+// 		this.standard = standard;
+// 	}
 
-	markAttendance() {
-		console.log(`hey there ${this.name} is present: Normal classroom attance`);
-	}
+// 	markAttendance() {
+// 		console.log(`hey there ${this.name} is present: Normal classroom attance`);
+// 	}
 
-	grades() {
-		console.log("grades nice");
-	}
-}
+// 	grades() {
+// 		console.log("grades nice");
+// 	}
+// }
 
-// super // -> parent
+// // super // -> parent
 
-// child class -> derived class.
-class SportCaptain extends Student {
-	favTool; // Bat, ball, badmintion, tennis racket
+// // child class -> derived class.
+// class SportCaptain extends Student {
+// 	favTool; // Bat, ball, badmintion, tennis racket
 
-	constructor(name, stand, favTool) {
-		super(name, stand); // I am calling Constructor of parent
-		this.favTool = favTool;
-	}
+// 	constructor(name, stand, favTool) {
+// 		super(name, stand); // I am calling Constructor of parent
+// 		this.favTool = favTool;
+// 	}
 
-	// Method overriding ...
-	// child markAttendance method will OVERIDE THE Parent markAttendance
-	markAttendance() {
-		console.log(`sports captain ${this.name} is present in the ground`);
-	}
+// 	// Method overriding ...
+// 	// child markAttendance method will OVERIDE THE Parent markAttendance
+// 	markAttendance() {
+// 		console.log(`sports captain ${this.name} is present in the ground`);
+// 	}
 
-	routine() {
-		console.log("play cricket all day and do not study");
+// 	routine() {
+// 		console.log("play cricket all day and do not study");
 
-		super.grades(); // -> this can be done
-	}
-}
+// 		super.grades(); // -> this can be done
+// 	}
+// }
 
 // const akash = new Student("akash", 5);
 // const ankush = new Student("ankush", 10);
@@ -130,8 +130,8 @@ class SportCaptain extends Student {
 // console.log(akash);
 // console.log(ankush);
 
-const virat = new SportCaptain("virat", 11, "bat");
-virat.markAttendance();
+// const virat = new SportCaptain("virat", 11, "bat");
+// virat.markAttendance();
 // console.log(virat);
 
 /*
@@ -263,21 +263,21 @@ virat.markAttendance();
 // ------------------------------ Instance VS STATIC Properties/METHODS  ----------------------
 
 // class Circle {
-//   radius;
+// 	radius;
 
-//   constructor(radius) {
-//     this.radius = radius;
-//   }
+// 	constructor(radius) {
+// 		this.radius = radius;
+// 	}
 
-//   // normal method
-//   draw() {
-//     console.log("DRAW");
-//   }
+// 	// normal method
+// 	draw() {
+// 		console.log("DRAW");
+// 	}
 
-//   // static METHOD
-//   static parse() {
-//     console.log("static parse");
-//   }
+// 	// static METHOD
+// 	static parse() {
+// 		console.log("static parse");
+// 	}
 // }
 
 // circle variable is INSTANCE of Circle class
@@ -290,7 +290,7 @@ virat.markAttendance();
 
 // Circle.parse();
 
-// SOmething like below is not possible.
+// // SOmething like below is not possible.
 
 // Circle.draw();
 // console.log(Circle.radius);
