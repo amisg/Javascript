@@ -30,9 +30,9 @@
 */
 
 // function foo() {
-//   // context -> this -> null/ window
-//   console.log(this, "context");
-//   console.log("hey there I am foo");
+// 	// context -> this -> null/ window
+// 	console.log(this, "context");
+// 	console.log("hey there I am foo");
 // }
 
 // foo(); // is this a call site ? yes
@@ -45,43 +45,43 @@
 
 // example 1.
 
-// var obj = {
-//   name: "utkarsh",
-//   rollNumber: 12,
-//   func: function () {
-//     // context -> this -> obj
-//     console.log(this, "context");
+// let obj = {
+// 	name: "utkarsh",
+// 	rollNumber: 12,
+// 	func: function () {
+// 		// context -> this -> obj
+// 		console.log(this, "context");
 
-//     console.log(`hello guys my name is ${this.name}`);
-//   },
+// 		console.log(`hello guys my name is ${this.name}`);
+// 	},
 // };
 
 // console.log(obj.name); // utkarsh
 // console.log(obj.rollNumber); // 12
-// // obj.func(); // hello guys
+// obj.func(); // hello guys
 
 // obj.func(); // is this a call site ? YES
-// // have I given any Extra Information to func() ? yes
+// have I given any Extra Information to func() ? yes
 
 // example 2
 
 // var obj = {
-//   name: "utkarsh",
-//   rollNumber: 12,
-//   func: function () {
-//     // context -> this -> obj
-//     console.log(this, "context");
+// 	name: "utkarsh",
+// 	rollNumber: 12,
+// 	func: function () {
+// 		// context -> this -> obj
+// 		console.log(this, "context");
 
-//     console.log(`hello guys my name is ${this.name}`);
-//   },
+// 		console.log(`hello guys my name is ${this.name}`);
+// 	},
 // };
 
-// obj.func(); // is this a call site ? // yes
-// have I given some Extra info to func() ?  // yes
+// // obj.func(); // is this a call site ? // yes
+// // have I given some Extra info to func() ?  // yes
 
-// hello guys my name is utkarsh
+// // hello guys my name is utkarsh
 
-// console.log(" ---- - - - - - -x-x-x-x-x-x-x-x-- - - - - - - -");
+// // console.log(" ---- - - - - - -x-x-x-x-x-x-x-x-- - - - - - - -");
 
 // const funcCopy = obj.func; // is this a CALL SITE ? // NOOOOOOOO
 
@@ -95,17 +95,17 @@
 //example 3 ->
 
 // let obj2 = {
-//   name: "utkarsh",
-//   func: function () {
-//     // context -> this -> obj2
-//     console.log(`hello... ${this.name}`);
-//   },
+// 	name: "utkarsh",
+// 	func: function () {
+// 		// context -> this -> obj2
+// 		console.log(`hello... ${this.name}`);
+// 	},
 // };
 
 // let obj1 = {
-//   name: "akash",
-//   rollNumber: 12,
-//   obj2: obj2,
+// 	name: "akash",
+// 	rollNumber: 12,
+// 	obj2: obj2,
 // };
 
 // obj1.obj2.func(); // answer for this ?
